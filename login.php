@@ -13,6 +13,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
   if($conn->connect_error){
     die("Connection Failed: ".$conn->connect_error );
   }
+  
   // Validate Login Authentication
   $query="SELECT * FROM login WHERE username='$username' AND password='$password'";
   $result=$conn->query($query);
